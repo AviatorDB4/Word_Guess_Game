@@ -8,13 +8,14 @@ var wordElement = document.getElementById('baseballTerm');
 var letterCountElement = document.getElementById('letterCount');
 var lettersGuessedElement = document.getElementById('lettersGuessed');
 
-function initializeGame() {
+function initializeGame() 
+{
   baseballTerm = '';
   userGuess = 10;
   wrongGuess = [];
   correctGuess = [];
 
-  // initialize correctGuesses array with underscores
+  // initialize correctGuess array with underscores
   for (var i = 0; i < baseballTerm.length; i++) {
     correctGuesses.push('_');
   }
@@ -23,8 +24,9 @@ function initializeGame() {
   letterCountElement.innerHTML = allowedGuess;
 } 
 
-function updateGuess(letter) {
-  allowedGuess--; // decrement guesses left
+function updateGuess(letter) 
+{
+  allowedGuess--; // decrement guess left
   letterCountElement.innerHTML = allowedGuess;
 
   if (baseballTerm.indexOf(letter) === -1) { // letter is NOT in the word
@@ -42,7 +44,8 @@ function updateGuess(letter) {
   }
 }
 
-function checkWin() {
+function checkWin() 
+{
   if (correctGuess.indexOf('_') === -1) {
     alert('You Won!');
   } else if (allowedGuesses === 0) {
@@ -50,7 +53,8 @@ function checkWin() {
   }
 }
 
-document.onkeyup = function (event) {
+document.onkeyup = function (event) 
+{
   var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
   updateGuess(letterGuessed);
   checkWin();
