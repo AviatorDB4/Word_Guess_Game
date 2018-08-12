@@ -44,24 +44,9 @@ p
   font-size: 100%;
 }
 
-#alphabet li 
-{
-  float:left;
-  margin: 0 10px 10px 0;
-  list-style:none;
-  width:35px;
-  height:30px;
-  padding-top:10px;
-  background:white;
-  color:black;
-  cursor:pointer;
-  border: solid 1px;
-  
-}
-
 #mylives
 {
-  font-size:1.6em;
+  font-size: 150%;
   text-align:center;
   display:block;
 }

@@ -1,13 +1,22 @@
+object.onload = function(initializeGame){
+
+
 var baseballTerm = ['pastime', 'American League', 'National League', 'World Series', 'strike', 'ball', 'out','safe', 'homerun', 'Diamondbacks', 'Braves', 'Orioles', 'Boston Red Sox', 'Chicago Cubs', 'Chicago White Sox', 'Cincinnati Reds', 'Indians', 'Rockies', 'Tigers', 'Astros', 'Royals', 'LA Angels', 'LA Dodgers', 'Maimi Marlins', 'Brewers', 'Twins', 'NY Mets', 'NY Yankees', 'Athletics', 'Phillies', 'Pirates', 'Gaints', 'Mariners', 'Cardinals', 'TB Rays', 'Rangers', 'Blue Jays', 'Nationals'];
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
 var userGuess;
 var correctGuess;
 var wrongGuess;
+var allowedGuess;
+var mylives = 10;
+var updateGuess;
 
-var wordElement = document.getElementById('baseballTerm');
+
+var updateGuess = document.getElementById('updateGuess');
+var allowedGuess = document.getElementById('allowedGuess');
+var correctGuess = document.getElementById('correctGuess');
 var letterCountElement = document.getElementById('letterCount');
 var lettersGuessedElement = document.getElementById('lettersGuessed');
-
+var baseballTermElement = document.getElementById('baseballTerm');
 function initializeGame() 
 {
   baseballTerm = '';
@@ -15,33 +24,37 @@ function initializeGame()
   wrongGuess = [];
   correctGuess = [];
 
-  // initialize correctGuess array with underscores
-  for (var i = 0; i < baseballTerm.length; i++) {
+  for (var i = 0; i < baseballTerm.length; i++) 
+  {
     correctGuess
     .push('_');
   }
 
-  wordElement.innerHTML = correctGuess.join(' ');
+  baseballTermElement.innerHTML = correctGuess.join(' ');
   letterCountElement.innerHTML = allowedGuess;
 } 
 
 function updateGuess(letter) 
 {
-  allowedGuess--; // decrement guess left
+  allowedGuess--; 
   letterCountElement.innerHTML = allowedGuess;
 
-  if (baseballTerm.indexOf(letter) === -1) { // letter is NOT in the word
-    wrongGuess.push(letter); // update letters guessed
+  if (baseballTerm.indexOf(letter) === -1) 
+  { 
+    wrongGuess.push(letter); 
     lettersGuessedElement.innerHTML = wrongGuess.join(', ');
-  } else { // letter IS in the word
-    // replace underscore with the letter
-    for (var i = 0; i < baseballTerm.length; i++) {
-      if (word[i] === letter) {
+  } 
+  else 
+  {
+    for (var i = 0; i < baseballTerm.length; i++) 
+    {
+      if (word[i] === letter) 
+      {
         correctGuess[i] = letter;
       }
     }
 
-    wordElement.innerHTML = correctGuess.join(' ');
+    baseballTerm.innerHTML = correctGuess.join(' ');
   }
 }
 
@@ -59,9 +72,9 @@ function checkWin()
 
 document.onkeyup = function (event) 
 {
-  var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
-  updateGuess(letterGuessed);
+  var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+  updateGuess(userGuess);
   checkWin();
 };
+};
 
-initializeGame();
