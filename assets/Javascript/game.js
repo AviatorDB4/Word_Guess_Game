@@ -17,7 +17,8 @@ function initializeGame()
 
   // initialize correctGuess array with underscores
   for (var i = 0; i < baseballTerm.length; i++) {
-    correctGuesses.push('_');
+    correctGuess
+    .push('_');
   }
 
   wordElement.innerHTML = correctGuess.join(' ');
@@ -46,11 +47,14 @@ function updateGuess(letter)
 
 function checkWin() 
 {
-  if (correctGuess.indexOf('_') === -1) {
+  if (correctGuess.indexOf('_') === -1) 
+  {
     alert('You Won!');
-  } else if (allowedGuesses === 0) {
-    alert('You Lost!');
   }
+   else if (allowedGuesses === 0) 
+   {
+    alert('You Lost!');
+   }
 }
 
 document.onkeyup = function (event) 
