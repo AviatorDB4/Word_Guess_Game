@@ -1,0 +1,106 @@
+body
+{
+  font-family: "Arial Black", Gadget, sans-serif; 
+  color:black;
+  height:100%;
+  text-align:center;
+  font-size:18px;
+  clear: none;
+  background-image: url(http://www.sportshdwallpapers.com/download/mlb-logo-painted-on-brick-wall_1920x1080_1115-hd.jpg);
+  background-size: auto;
+}
+
+
+wrapper
+{
+  width: 95%;
+  margin: 10px auto;
+  padding: 10px;
+  border-color: black;
+  border-style: dashed;
+  text-align: center;
+}
+
+
+canvas
+{
+  color:white;
+  border: black dashed 2px;
+  padding:15px;
+  width: 400px;
+  height: 600px;
+}
+
+h1, h2, h3 
+{
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-weight: 100;
+	text-transform: uppercase;
+   margin:5px 0;
+}
+
+p
+{
+  font-size: 100%;
+}
+
+#alphabet li 
+{
+  float:left;
+  margin: 0 10px 10px 0;
+  list-style:none;
+  width:35px;
+  height:30px;
+  padding-top:10px;
+  background:white;
+  color:black;
+  cursor:pointer;
+  border: solid 1px;
+  
+}
+
+#my-word 
+{
+  margin: 0;
+  display: block;
+  padding: 0;
+  display:block;
+}
+
+#my-word li 
+{
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size:1.6em;
+}
+
+
+#mylives
+{
+  font-size:1.6em;
+  text-align:center;
+  display:block;
+}
+
+#button
+{
+   color:white;
+   border: solid 1px white;
+   text-decoration:none;
+   cursor:pointer;
+   font-size: 100%;
+   padding: 10px;
+   width:100px;
+   margin: 10px;
+   font-size: 100%;
+}
+
+#replay
+{
+ color: red;
+ background-color: black;
+}
+
