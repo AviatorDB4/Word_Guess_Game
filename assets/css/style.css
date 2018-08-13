@@ -70,3 +70,12 @@ p
  background-color: black;
 }
 
+#holdguess
+{
+    height: 100px;
+    width: 400px;
+    border-style: solid;
+    text-align: center;
+    padding: 10px;
+}
+

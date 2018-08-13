@@ -1,4 +1,4 @@
-object.onload = function(initializeGame){
+object.onload = function initializeGame(){
 
 
 var baseballTerm = ['pastime', 'American League', 'National League', 'World Series', 'strike', 'ball', 'out','safe', 'homerun', 'Diamondbacks', 'Braves', 'Orioles', 'Boston Red Sox', 'Chicago Cubs', 'Chicago White Sox', 'Cincinnati Reds', 'Indians', 'Rockies', 'Tigers', 'Astros', 'Royals', 'LA Angels', 'LA Dodgers', 'Maimi Marlins', 'Brewers', 'Twins', 'NY Mets', 'NY Yankees', 'Athletics', 'Phillies', 'Pirates', 'Gaints', 'Mariners', 'Cardinals', 'TB Rays', 'Rangers', 'Blue Jays', 'Nationals'];
