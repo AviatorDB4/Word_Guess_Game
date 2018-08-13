@@ -73,9 +73,11 @@ p
 #holdguess
 {
     height: 100px;
-    width: 400px;
+    width: 90%;
     border-style: solid;
-    text-align: center;
+    text-align: left;
     padding: 10px;
+    margin: 30px;
+
 }
 
