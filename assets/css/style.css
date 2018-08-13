@@ -28,7 +28,7 @@ canvas
   border: black dashed 2px;
   padding:15px;
   width: 400px;
-  height: 600px;
+  height: 400px;
 }
 
 h1, h2, h3 
@@ -80,4 +80,6 @@ p
     margin: 30px;
 
 }
+
+
 
